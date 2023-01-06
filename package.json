@@ -1,0 +1,24 @@
+{
+  "name": "project_ecommerce-next-sanity-stripe",
+  "version": "1.0.0",
+  "description": "<a name=\"readme-top\"></a>",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run client\" \"npm run sanity\"",
+    "client": "cd client && npm run dev",
+    "sanity": "cd sanity && npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justinTsugranes/project_ecommerce-next-sanity-stripe.git"
+  },
+  "author": "justinTsugranes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/justinTsugranes/project_ecommerce-next-sanity-stripe/issues"
+  },
+  "homepage": "https://github.com/justinTsugranes/project_ecommerce-next-sanity-stripe#readme",
+  "dependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
