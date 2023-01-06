@@ -304,7 +304,7 @@ Send me some [![bitcoin]][bitcoin-address] or [![ethereum]][ethereum-address] --
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 [project-screenshot]: images/project-screenshot.jpg
-[project-url]: INSERT_PROJECT_URL
+[project-url]: https://justintsugranes-ecommerce-next-sanity-stripe.vercel.app/
 [repo-url]: https://github.com/justintsugranes/project_ecommerce-next-sanity-stripe.git
 [contributors-shield]: https://img.shields.io/github/contributors/justintsugranes/project_ecommerce-next-sanity-stripe.svg?style=for-the-badge
 [contributors-url]: https://github.com/justintsugranes/project_ecommerce-next-sanity-stripe/graphs/contributors
