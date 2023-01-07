@@ -10,9 +10,6 @@ export const StateContext = ({ children }) => {
   const [totalQuantities, setTotalQuantities] = useState(0)
   const [qty, setQty] = useState(1)
 
-  let foundProduct
-  let index
-
   const onAdd = (product, quantity) => {
     // Check if the product is already in the cart
     const checkProductInCart = cartItems.find(
@@ -43,6 +40,32 @@ export const StateContext = ({ children }) => {
 
     // Show a toast message indicating that the product was added to the cart
     toast.success(`${qty} ${product.name} added to the cart.`)
+  }
+
+  const onRemove = (id) => {
+    // Find the product in the cart
+    const foundProduct = cartItems.find((item) => item._id === id)
+
+    // Find the index of the product in the cart
+    const index = cartItems.findIndex((cartProduct) => cartProduct._id === id)
+
+    // Create a copy of the cart items
+    let updatedCart = [...cartItems]
+
+    // Remove the found product from the cart
+    updatedCart.splice(index, 1)
+
+    // Update the total price and quantity
+    setTotalPrice(
+      (prevTotalPrice) =>
+        prevTotalPrice - foundProduct.price * foundProduct.quantity,
+    )
+    setTotalQuantities(
+      (prevTotalQuantities) => prevTotalQuantities - foundProduct.quantity,
+    )
+
+    // Update the cart items
+    setCartItems(updatedCart)
   }
 
   const toggleCartItemQuantity = (id, quantity) => {
@@ -107,6 +130,7 @@ export const StateContext = ({ children }) => {
         incQty,
         decQty,
         onAdd,
+        onRemove,
         setShowCart,
         toggleCartItemQuantity,
       }}
