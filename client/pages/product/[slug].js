@@ -97,7 +97,7 @@ const ProductDetails = ({ product, products }) => {
               Add to Cart
             </button>
             {/* Display the "Buy Now" button */}
-            <button type="button" className="buy-now" onClick="">
+            <button type="button" className="buy-now" onClick={''}>
               Buy Now
             </button>
           </div>
@@ -130,14 +130,12 @@ export const getStaticPaths = async () => {
   `
   // Fetch the products from Sanity
   const products = await client.fetch(query)
-
   // Map the products to an array of objects containing the `slug` value as a URL parameter
   const paths = products.map((product) => ({
     params: {
       slug: product.slug.current,
     },
   }))
-
   // Return the paths and set `fallback` to 'blocking' to show a loading screen while the data is being fetched
   return {
     paths,
@@ -150,14 +148,11 @@ export const getStaticProps = async ({ params: { slug } }) => {
   const query = `*[_type == "product" && slug.current == '${slug}'][0]`
   // Fetch all products from Sanity
   const productsQuery = '*[_type == "product"]'
-
   // Get the product and products from Sanity
   const product = await client.fetch(query)
   const products = await client.fetch(productsQuery)
-
   // Log the product to the console for debugging purposes
-  console.log(product)
-
+  // console.log(product)
   // Return the products and product data as props to the component
   return {
     props: { products, product },

@@ -15,7 +15,6 @@ export const StateContext = ({ children }) => {
     const checkProductInCart = cartItems.find(
       (item) => item._id === product._id,
     )
-
     // Update the total price and quantity
     setTotalPrice((prevTotalPrice) => prevTotalPrice + product.price * quantity)
     setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + quantity)
@@ -29,7 +28,6 @@ export const StateContext = ({ children }) => {
             quantity: cartProduct.quantity + quantity,
           }
       })
-
       setCartItems(updatedCartItems)
     } else {
       // If the product is not in the cart, add it to the cart with the specified quantity
@@ -37,7 +35,6 @@ export const StateContext = ({ children }) => {
 
       setCartItems([...cartItems, { ...product }])
     }
-
     // Show a toast message indicating that the product was added to the cart
     toast.success(`${qty} ${product.name} added to the cart.`)
   }
@@ -45,16 +42,12 @@ export const StateContext = ({ children }) => {
   const onRemove = (id) => {
     // Find the product in the cart
     const foundProduct = cartItems.find((item) => item._id === id)
-
     // Find the index of the product in the cart
     const index = cartItems.findIndex((cartProduct) => cartProduct._id === id)
-
     // Create a copy of the cart items
     let updatedCart = [...cartItems]
-
     // Remove the found product from the cart
     updatedCart.splice(index, 1)
-
     // Update the total price and quantity
     setTotalPrice(
       (prevTotalPrice) =>
@@ -63,7 +56,6 @@ export const StateContext = ({ children }) => {
     setTotalQuantities(
       (prevTotalQuantities) => prevTotalQuantities - foundProduct.quantity,
     )
-
     // Update the cart items
     setCartItems(updatedCart)
   }
@@ -71,10 +63,8 @@ export const StateContext = ({ children }) => {
   const toggleCartItemQuantity = (id, quantity) => {
     // Find the product in the cart
     const foundProduct = cartItems.find((item) => item._id === id)
-
     // Find the index of the product in the cart
     const index = cartItems.findIndex((product) => product._id === id)
-
     // Create a copy of the cart items
     let updatedCart = [...cartItems]
 
@@ -84,7 +74,6 @@ export const StateContext = ({ children }) => {
         ...foundProduct,
         quantity: foundProduct.quantity + 1,
       }
-
       // Increase the total price and quantity
       setTotalPrice((prevTotalPrice) => prevTotalPrice + foundProduct.price)
       setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + 1)
@@ -95,13 +84,11 @@ export const StateContext = ({ children }) => {
           ...foundProduct,
           quantity: foundProduct.quantity - 1,
         }
-
         // Decrease the total price and quantity
         setTotalPrice((prevTotalPrice) => prevTotalPrice - foundProduct.price)
         setTotalQuantities((prevTotalQuantities) => prevTotalQuantities - 1)
       }
     }
-
     // Update the cart items
     setCartItems(updatedCart)
   }
@@ -110,7 +97,6 @@ export const StateContext = ({ children }) => {
     // Increment the quantity value by 1
     setQty((prevQty) => prevQty + 1)
   }
-
   const decQty = () => {
     // Decrement the quantity value by 1, but prevent it from going below 1
     setQty((prevQty) => {
