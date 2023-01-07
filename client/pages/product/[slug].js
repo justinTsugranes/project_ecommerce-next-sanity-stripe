@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useStateContext } from '../../context/StateContext'
 
 import {
   AiOutlineMinus,
@@ -12,6 +13,7 @@ import { Product } from '../../components'
 
 const ProductDetails = ({ product, products }) => {
   const { image, name, details, price } = product
+  const { qty, incQty, decQty, onAdd } = useStateContext()
 
   const [index, setIndex] = useState(0)
 
@@ -72,22 +74,26 @@ const ProductDetails = ({ product, products }) => {
             <h3>Quantity:</h3>
             <p className="quantity-desc">
               {/* Display the minus button */}
-              <span className="minus" onClick="">
+              <span className="minus" onClick={decQty}>
                 <AiOutlineMinus />
               </span>
               {/* Display the current quantity */}
               <span className="num" onClick="">
-                0
+                {qty}
               </span>
               {/* Display the plus button */}
-              <span className="plus" onClick="">
+              <span className="plus" onClick={incQty}>
                 <AiOutlinePlus />
               </span>
             </p>
           </div>
           <div className="buttons">
             {/* Display the "Add to Cart" button */}
-            <button type="button" className="add-to-cart" onClick="">
+            <button
+              type="button"
+              className="add-to-cart"
+              onClick={() => onAdd(product, qty)}
+            >
               Add to Cart
             </button>
             {/* Display the "Buy Now" button */}

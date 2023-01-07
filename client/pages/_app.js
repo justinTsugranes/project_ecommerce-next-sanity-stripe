@@ -1,6 +1,8 @@
-import '../styles/globals.css'
+import { Toaster } from 'react-hot-toast'
 
 import { Layout } from '../components'
+import '../styles/globals.css'
+import { StateContext } from '../context/StateContext'
 
 // App function is the top-level component for the application
 // It receives a 'Component' prop, which is the current page being rendered,
@@ -8,8 +10,11 @@ import { Layout } from '../components'
 export default function App({ Component, pageProps }) {
   // Render the Layout component with the current page inside it
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <StateContext>
+      <Layout>
+        <Toaster />
+        <Component {...pageProps} />
+      </Layout>
+    </StateContext>
   )
 }
