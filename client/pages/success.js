@@ -18,7 +18,7 @@ const Success = () => {
 
     // Run confetti effect
     runConfetti()
-  }, [])
+  }, [setCartItems, setTotalPrice, setTotalQuantities])
 
   return (
     <div className="success-wrapper">
