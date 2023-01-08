@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
 
 // Import the `urlFor` function from the `lib/client` module
 import { urlFor } from '../lib/client'
@@ -16,7 +15,7 @@ const HeroBanner = ({ heroBanner }) => (
       {/* Render the large text 1 from the heroBanner object */}
       <h1>{heroBanner.largeText1}</h1>
       {/* Render the image from the heroBanner object, using the `urlFor` function to generate the URL */}
-      <Image
+      <img
         src={urlFor(heroBanner.image)}
         alt="hero-banner"
         className="hero-banner-image"

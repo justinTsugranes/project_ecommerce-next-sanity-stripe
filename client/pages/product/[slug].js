@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { useStateContext } from '../../context/StateContext'
-import Image from 'next/image'
 
 import {
   AiOutlineMinus,
@@ -34,7 +33,7 @@ const ProductDetails = ({ product, products }) => {
           {/* Container for the main product image */}
           <div className="image-container">
             {/* Render the main product image using the `urlFor` function to generate the URL. The `index` state variable is used to determine which image to display */}
-            <Image
+            <img
               src={urlFor(image && image[index])}
               alt={name}
               className="product-detail-image"
@@ -44,7 +43,7 @@ const ProductDetails = ({ product, products }) => {
           <div className="small-images-container">
             {/* Map through the images in the `image` array and render a small image for each one. The `setIndex` function is called on mouse enter to update the `index` state variable and display the corresponding image as the main image */}
             {image?.map((item, i) => (
-              <Image
+              <img
                 key={i}
                 src={urlFor(item)}
                 alt={name}
