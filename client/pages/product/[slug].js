@@ -17,6 +17,7 @@ const ProductDetails = ({ product, products }) => {
   const { qty, incQty, decQty, onAdd, setShowCart } = useStateContext()
 
   const handleBuyNow = () => {
+    // Add the product to the cart with the specified quantity
     onAdd(product, qty)
 
     // Navigate to the checkout page

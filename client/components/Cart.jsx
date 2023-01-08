@@ -53,6 +53,7 @@ const Cart = () => {
   return (
     <div className="cart-wrapper" ref={cartRef}>
       <div className="cart-container">
+        {/* Button to close the cart */}
         <button
           type="button"
           className="cart-heading"
@@ -60,9 +61,11 @@ const Cart = () => {
         >
           <AiOutlineLeft />
           <span className="heading">Your Cart</span>
+          {/* Number of items in the cart */}
           <span className="cart-num-items">({totalQuantities} items)</span>
         </button>
 
+        {/* If cart is empty, show message to continue shopping */}
         {cartItems.length < 1 && (
           <div className="empty-cart">
             <AiOutlineShopping size={150} />

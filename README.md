@@ -59,7 +59,8 @@ _I'd love to hear any feedback or just thoughts. Feel free to reach out at my co
   <!-- [![jquery]][jquery-url] -->
   <!-- [![laravel]][laravel-url] -->
 
-  - [![next]][next-url]
+  [![next]][next-url]
+  [![css]][css-url]
     <!-- [![react]][react-url] -->
     <!-- [![svelte]][svelte-url] -->
     <!-- [![vue]][vue-url] -->
@@ -74,7 +75,6 @@ _I'd love to hear any feedback or just thoughts. Feel free to reach out at my co
 <!-- - **UI / CSS Frameworks & Libraries** -->
 
   <!-- [![html]][html-url] -->
-  <!-- [![css]][css-url] -->
   <!-- [![material-ui]][material-ui-url] -->
   <!-- [![chakra-ui]][chakra-ui-url] -->
   <!-- [![bootstrap]][bootstrap-url] -->
@@ -131,11 +131,13 @@ _I'd love to hear any feedback or just thoughts. Feel free to reach out at my co
   <!-- [![jira]][jira-url] -->
   <!-- [![notion]][notion-url] -->
 
-<!-- #### Deployment / Hosting -->
+#### Deployment / Hosting
 
 <!-- [![heroku]][heroku-url] -->
 <!-- [![netlify]][netlify-url] -->
-<!-- [![vercel]][vercel-url] -->
+
+[![vercel]][vercel-url]
+
 <!-- [![stackblitz]][stackblitz-url] -->
 
 <!-- [![chrome-web-store]][chrome-web-store-url] -->
@@ -332,6 +334,8 @@ Send me some [![bitcoin]][bitcoin-address] or [![ethereum]][ethereum-address] --
 
 [next]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [next-url]: https://nextjs.org/
+[css]: https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white
+[css-url]: https://developer.mozilla.org/en-US/docs/Web/CSS
 
 <!-- [react]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [react-url]: https://reactjs.org/ -->
@@ -355,9 +359,6 @@ Send me some [![bitcoin]][bitcoin-address] or [![ethereum]][ethereum-address] --
 
 <!-- [html]: https://img.shields.io/badge/HTML5-e34f26?style=for-the-badge&logo=html5&logoColor=white
 [html-url]: https://developer.mozilla.org/en-US/docs/Glossary/HTML5 -->
-
-[css]: https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white
-[css-url]: https://developer.mozilla.org/en-US/docs/Web/CSS
 
 <!-- [bootstrap]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [bootstrap-url]: https://getbootstrap.com -->
