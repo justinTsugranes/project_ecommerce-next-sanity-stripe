@@ -12,7 +12,7 @@ const Navbar = () => {
     <div className="navbar-container">
       {/* The logo is a link to the homepage */}
       <p className="logo">
-        <Link href="/">misfitDodo Headphones</Link>
+        <Link href="/">theMisfitDodo</Link>
       </p>
       {/* The cart icon, when clicked, redirects the user to the cart page */}
       <button

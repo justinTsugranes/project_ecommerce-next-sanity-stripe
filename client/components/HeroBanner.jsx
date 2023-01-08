@@ -9,7 +9,7 @@ const HeroBanner = ({ heroBanner }) => (
   <div className="hero-banner-container">
     <div>
       {/* Render the small text from the heroBanner object */}
-      <p className="beats-solo">{heroBanner.smallText}</p>
+      <p className="featured-product">{heroBanner.smallText}</p>
       {/* Render the mid text from the heroBanner object */}
       <h3>{heroBanner.midText}</h3>
       {/* Render the large text 1 from the heroBanner object */}
@@ -25,9 +25,7 @@ const HeroBanner = ({ heroBanner }) => (
         {/* Render a Link component that navigates to the product page for the product specified in the heroBanner object */}
         <Link href={`/product/${heroBanner.product}`}>
           {/* Render a button that contains the button text from the heroBanner object */}
-          <button type="button" className="">
-            {heroBanner.buttonText}
-          </button>
+          <button type="button">{heroBanner.buttonText}</button>
         </Link>
 
         {/* Render the description from the heroBanner object */}
