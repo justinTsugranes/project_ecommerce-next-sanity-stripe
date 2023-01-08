@@ -13,7 +13,7 @@ const Home = ({ products, bannerData }) => {
     <>
       {/* Render the HeroBanner component, passing in the first element of the bannerData array as props */}
       <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
-      <div className="products-heading">
+      <div className="products-heading" id="best-selling">
         <h2>Best Selling Products</h2>
         <p>High quality headphones and speakers</p>
       </div>

@@ -36,7 +36,7 @@ const FooterBanner = ({
           <p>{desc}</p>
 
           {/* Link to product page with the product slug */}
-          <Link href={`/product/${product}`}>
+          <Link href="#best-selling">
             <button type="button">{buttonText}</button>
           </Link>
         </div>

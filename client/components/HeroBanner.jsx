@@ -23,7 +23,7 @@ const HeroBanner = ({ heroBanner }) => (
 
       <div>
         {/* Render a Link component that navigates to the product page for the product specified in the heroBanner object */}
-        <Link href={`/product/${heroBanner.product}`}>
+        <Link href="#best-selling">
           {/* Render a button that contains the button text from the heroBanner object */}
           <button type="button">{heroBanner.buttonText}</button>
         </Link>
