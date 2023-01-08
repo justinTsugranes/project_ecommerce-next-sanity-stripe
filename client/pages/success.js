@@ -10,10 +10,13 @@ const Success = () => {
   const { setCartItems, setTotalPrice, setTotalQuantities } = useStateContext()
 
   useEffect(() => {
+    // Clear local storage and reset cart state
     localStorage.clear()
     setCartItems([])
     setTotalPrice(0)
     setTotalQuantities(0)
+
+    // Run confetti effect
     runConfetti()
   }, [])
 
@@ -31,6 +34,7 @@ const Success = () => {
             order@example.com
           </a>
         </p>
+        {/* Navigate home */}
         <Link href="/">
           <button type="button" width="300px" className="btn">
             Continue Shopping

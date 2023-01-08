@@ -13,9 +13,15 @@ import { Product } from '../../components'
 
 const ProductDetails = ({ product, products }) => {
   const { image, name, details, price } = product
-  const { qty, incQty, decQty, onAdd } = useStateContext()
-
   const [index, setIndex] = useState(0)
+  const { qty, incQty, decQty, onAdd, setShowCart } = useStateContext()
+
+  const handleBuyNow = () => {
+    onAdd(product, qty)
+
+    // Navigate to the checkout page
+    setShowCart(true)
+  }
 
   return (
     <div>
@@ -78,9 +84,7 @@ const ProductDetails = ({ product, products }) => {
                 <AiOutlineMinus />
               </span>
               {/* Display the current quantity */}
-              <span className="num" onClick="">
-                {qty}
-              </span>
+              <span className="num">{qty}</span>
               {/* Display the plus button */}
               <span className="plus" onClick={incQty}>
                 <AiOutlinePlus />
@@ -97,7 +101,7 @@ const ProductDetails = ({ product, products }) => {
               Add to Cart
             </button>
             {/* Display the "Buy Now" button */}
-            <button type="button" className="buy-now" onClick={''}>
+            <button type="button" className="buy-now" onClick={handleBuyNow}>
               Buy Now
             </button>
           </div>
