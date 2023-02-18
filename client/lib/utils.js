@@ -1,12 +1,9 @@
 import confetti from 'canvas-confetti'
 
-// runConfetti function displays confetti animation on the screen
 export const runConfetti = () => {
   // duration of the animation in milliseconds
   let duration = 10 * 1000
-  // time when the animation should end
   let animationEnd = Date.now() + duration
-  // default values for confetti
   let defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 }
 
   // helper function to get a random number within a range

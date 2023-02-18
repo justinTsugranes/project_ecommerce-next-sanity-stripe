@@ -2,13 +2,17 @@
 import sanityClient from '@sanity/client'
 import imageUrlBuilder from '@sanity/image-url'
 
-// Initialize the Sanity client with the specified project ID, dataset, API version, and access token
+const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
+const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET
+const apiVersion = process.env.NEXT_PUBLIC_SANITY_API_VERSION
+const token = process.env.NEXT_PUBLIC_SANITY_TOKEN
+
 export const client = sanityClient({
-  projectId: 'z1asrl4s',
-  dataset: 'production',
-  apiVersion: '2023-01-05',
+  projectId,
+  dataset,
+  apiVersion,
+  token,
   useCdn: false,
-  token: process.env.NEXT_PUBLIC_SANITY_TOKEN,
 })
 
 // Initialize the image URL builder with the Sanity client

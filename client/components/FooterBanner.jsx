@@ -21,7 +21,6 @@ const FooterBanner = ({
       <div className="banner-desc">
         {/* Left Side */}
         <div className="left">
-          {/* Discount amount, large text and sale duration */}
           <p>{discount}</p>
           <h3>{largeText1}</h3>
           <h3>{largeText2}</h3>
@@ -30,18 +29,15 @@ const FooterBanner = ({
 
         {/* Right Side */}
         <div className="right">
-          {/* Small and middle text, description and button */}
           <p>{smallText}</p>
           <h3>{midText}</h3>
           <p>{desc}</p>
 
-          {/* Link to product page with the product slug */}
           <Link href="#best-selling">
             <button type="button">{buttonText}</button>
           </Link>
         </div>
 
-        {/* Image in the banner */}
         <img
           src={urlFor(image)}
           alt="footer-banner"

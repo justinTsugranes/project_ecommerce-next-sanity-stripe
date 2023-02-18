@@ -1,6 +1,7 @@
 import Stripe from 'stripe'
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
+const projectId = process.env.SANITY_STUDIO_PROJECT_ID
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
@@ -17,7 +18,7 @@ export default async function handler(req, res) {
           const newImage = img
             .replace(
               'image-',
-              'https://cdn.sanity.io/images/z1asrl4s/production/',
+              `https://cdn.sanity.io/images/${projectId}/production/`,
             )
             .replace('-webp', '.webp')
 

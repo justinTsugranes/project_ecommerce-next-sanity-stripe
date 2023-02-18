@@ -10,11 +10,9 @@ const Navbar = () => {
 
   return (
     <div className="navbar-container">
-      {/* The logo is a link to the homepage */}
       <p className="logo">
         <Link href="/">theMisfitDodo</Link>
       </p>
-      {/* The cart icon, when clicked, redirects the user to the cart page */}
       <button
         type="button"
         className="cart-icon"
@@ -24,7 +22,6 @@ const Navbar = () => {
         <span className="cart-item-qty">{totalQuantities}</span>
       </button>
 
-      {/* The Cart component */}
       {showCart && <Cart />}
     </div>
   )
